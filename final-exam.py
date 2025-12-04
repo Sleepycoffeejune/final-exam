@@ -42,7 +42,7 @@ class DeliveryOrder:
 
     def summary(self):
         print("Order Summary:")
-        print(f"Item: {self.item}\nCustomer: {self.customer.name}\nStatus: {self.status}\nDriver: {self.driver.name}")
+        print(f"Item: {self.item}\nCustomer: {self.customer}\nStatus: {self.status}\nDriver: {self.driver.name}")
 
         
 
@@ -54,13 +54,14 @@ driver = Driver("David", "motorcycle")
 customer1.introduce()
 customer2.introduce()
 driver.introduce()
-
+print()
 order1 = customer1.place_order("Laptop")
 order2 = customer2.place_order("Headphones")
 
 order1.summary()
+print()
 order2.summary()
-
+print()
 driver.deliver(order1)
 driver.deliver(order2)
 
